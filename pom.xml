@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.tubmc</groupId>
 	<artifactId>text-components</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.0-java8</version>
 	<name>TextComponents</name>
 	<description>A simple way to stylise mc text</description>
 	<url>https://github.com/TubMC/TextComponents</url>
