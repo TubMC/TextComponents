@@ -33,7 +33,7 @@ import org.jetbrains.annotations.Nullable;
  * @see ISelectedComponent
  * @see ITranslatableComponent
  */
-public sealed interface IComponent extends Cloneable, IStyled, IInteractable, ImplementationSpecificComponentMethods permits ITranslatableComponent, IScoreboardComponent, ISelectedComponent, IKeybindComponent, ILiteralComponent, ImplementationComponentBase {
+public interface IComponent extends Cloneable, IStyled, IInteractable, ImplementationSpecificComponentMethods {
 	/**
 	 * Conjoins two {@link IComponent}'s into one
 	 * 

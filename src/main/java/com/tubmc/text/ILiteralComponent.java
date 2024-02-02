@@ -32,7 +32,7 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
  * @see LiteralComponentBuilder
  * @see <a href="https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Plain_Text">https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Plain_Text</a>
  */
-public non-sealed interface ILiteralComponent extends IComponent {
+public interface ILiteralComponent extends IComponent {
 	/**
 	 * @since 1.0.0
 	 * @param text The message to use

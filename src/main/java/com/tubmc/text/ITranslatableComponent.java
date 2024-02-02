@@ -34,7 +34,7 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
  * @see TranslatableComponentBuilder
  * @see <a href="https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Translated_Text">https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Translated_Text</a>
  */
-public non-sealed interface ITranslatableComponent extends IComponent {
+public interface ITranslatableComponent extends IComponent {
 	/**
 	 * @since 1.0.0
 	 * @param translationKey The translation identifier to use

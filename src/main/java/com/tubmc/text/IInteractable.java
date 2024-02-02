@@ -32,7 +32,7 @@ import com.tubmc.text.interaction.HoverInteraction;
  * @see HoverInteraction
  */
 @Internal
-sealed interface IInteractable permits IComponent {
+interface IInteractable {
 	/**
 	 * @since 1.0.0
 	 * @return The {@link ClickInteraction} (if one is set)

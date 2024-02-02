@@ -30,7 +30,7 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
  * @see ISelectedComponent
  */
 @Internal
-sealed interface ISelectorBased permits IScoreboardComponent, ISelectedComponent {
+interface ISelectorBased {
 	/**
 	 * @since 1.0.0
 	 * @return The selector to use

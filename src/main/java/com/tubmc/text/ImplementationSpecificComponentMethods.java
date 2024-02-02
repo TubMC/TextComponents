@@ -28,4 +28,4 @@ import org.jetbrains.annotations.ApiStatus.Internal;
  * @see IComponent
  */
 @Internal
-sealed interface ImplementationSpecificComponentMethods permits IComponent { }
+interface ImplementationSpecificComponentMethods { }

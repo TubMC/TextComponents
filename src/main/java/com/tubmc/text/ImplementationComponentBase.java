@@ -28,4 +28,4 @@ import org.jetbrains.annotations.ApiStatus.Internal;
  * @see IComponent
  */
 @Internal
-non-sealed interface ImplementationComponentBase extends IComponent { }
+interface ImplementationComponentBase extends IComponent { }

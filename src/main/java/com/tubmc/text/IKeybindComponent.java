@@ -31,7 +31,7 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
  * @see KeybindComponentBuilder
  * @see <a href="https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Keybind">https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Keybind</a>
  */
-public non-sealed interface IKeybindComponent extends IComponent {
+public interface IKeybindComponent extends IComponent {
 	/**
 	 * @since 1.0.0
 	 * @param keybind The keybind to use

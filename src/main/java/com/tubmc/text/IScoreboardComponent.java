@@ -31,7 +31,7 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
  * @see ScoreboardComponentBuilder
  * @see <a href="https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Scoreboard_Value">https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Scoreboard_Value</a>
  */
-public non-sealed interface IScoreboardComponent extends IComponent, ISelectorBased {
+public interface IScoreboardComponent extends IComponent, ISelectorBased {
 	/**
 	 * Displays the recipients score
 	 * 

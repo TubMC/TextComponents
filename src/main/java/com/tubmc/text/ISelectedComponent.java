@@ -31,7 +31,7 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
  * @see SelectorComponentBuilder
  * @see <a href="https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Entity_Names">https://minecraft.fandom.com/wiki/Raw_JSON_text_format#Entity_Names</a>
  */
-public non-sealed interface ISelectedComponent extends IComponent, ISelectorBased {
+public interface ISelectedComponent extends IComponent, ISelectorBased {
 	/**
 	 * @since 1.0.0
 	 * @param selector The selector to use

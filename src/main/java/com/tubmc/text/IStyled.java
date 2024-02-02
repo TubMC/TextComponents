@@ -31,7 +31,7 @@ import fun.bb1.objects.annotations.AllowsEmptyString;
  * @see IComponent
  */
 @Internal
-sealed interface IStyled permits IComponent {
+interface IStyled {
 	/**
 	 * @since 1.0.0
 	 * @return The {@link Color} to display as
