@@ -1,7 +1,8 @@
 package com.tubmc.text;
 
+import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
+import java.util.stream.Collectors;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -44,7 +45,7 @@ public interface IComponent extends Cloneable, IStyled, IInteractable, Implement
 	 */
 	public static @NotNull IComponent union(@NotNull final IComponent firstComponent, @NotNull final IComponent secondComponent) {
 		final IComponent ret = AbstractImplementation.IMPLEMENTATION.createLiteral("");
-		ret.setChildren(List.of(firstComponent, secondComponent));
+		ret.setChildren(Arrays.asList(firstComponent, secondComponent));
 		return ret;
 	}
 	/**
@@ -71,7 +72,7 @@ public interface IComponent extends Cloneable, IStyled, IInteractable, Implement
 	 */
 	public default @NotNull IComponent deepClone() {
 		final IComponent toReturn = this.clone();
-		toReturn.setChildren(this.getChildren().stream().map(IComponent::deepClone).toList());
+		toReturn.setChildren(this.getChildren().stream().map(IComponent::deepClone).collect(Collectors.toList()));
 		return toReturn;
 	}
 }
