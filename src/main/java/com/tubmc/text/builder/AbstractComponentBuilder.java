@@ -51,7 +51,7 @@ import fun.bb1.objects.defineables.ITypedBuilder;
  * @version 1.0.0
  */
 @Internal
-public sealed abstract class AbstractComponentBuilder<T extends AbstractComponentBuilder<T>> implements ITypedBuilder<IComponent> permits KeybindComponentBuilder, LiteralComponentBuilder, TranslatableComponentBuilder, SelectorComponentBuilder, ScoreboardComponentBuilder {
+public abstract class AbstractComponentBuilder<T extends AbstractComponentBuilder<T>> implements ITypedBuilder<IComponent> {
 	/**
 	 * Creates an empty builder
 	 */
