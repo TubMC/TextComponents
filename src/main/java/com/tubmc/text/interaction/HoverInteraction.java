@@ -4,6 +4,10 @@ import org.jetbrains.annotations.NotNull;
 
 import com.tubmc.text.IComponent;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.Accessors;
+
 /**
  *    Copyright 2023 TubMC.com
  *
@@ -29,17 +33,19 @@ import com.tubmc.text.IComponent;
  * @see IComponent#setHovering(HoverInteraction)
  * @see IComponent#getHovering()
  */
-public final record HoverInteraction<T>(
+@RequiredArgsConstructor
+@Accessors(makeFinal = true, fluent = true, chain = false) @Getter
+public final class HoverInteraction<T> {
 		/**
 		 * The {@link HoverType} to use
 		 * 
 		 * @since 1.0.0
 		 */
-		@NotNull HoverType<T> type,
+		private final @NotNull HoverType<T> type;
 		/**
 		 * The data that will be used in tandem with the {@link #type}
 		 * 
 		 * @since 1.0.0
 		 */
-		@NotNull T data) {
+		private final @NotNull T data;
 }

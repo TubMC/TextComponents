@@ -8,6 +8,9 @@ import org.jetbrains.annotations.Nullable;
 import com.tubmc.text.IComponent;
 
 import fun.bb1.objects.annotations.DisallowsEmptyString;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.Accessors;
 
 /**
  *    Copyright 2023 TubMC.com
@@ -32,4 +35,13 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
  * @version 1.0.0
  * @see HoverType#ENTITY
  */
-public final record EntityHoverData(@Nullable IComponent entityName, @NotNull @DisallowsEmptyString String typeIdentifier, @NotNull UUID entityUUID) { }
+@RequiredArgsConstructor
+@Accessors(makeFinal = true, fluent = true, chain = false) @Getter
+public final class EntityHoverData {
+	
+	private final @Nullable IComponent entityName;
+	
+	private final @NotNull @DisallowsEmptyString String typeIdentifier;
+	
+	private final @NotNull UUID entityUUID;
+}

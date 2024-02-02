@@ -2,9 +2,10 @@ package com.tubmc.text.interaction;
 
 import org.jetbrains.annotations.NotNull;
 
-import com.tubmc.text.IComponent;
-
 import fun.bb1.objects.annotations.DisallowsEmptyString;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.Accessors;
 
 /**
  *    Copyright 2023 TubMC.com
@@ -31,17 +32,19 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
  * @see IComponent#setClicked(ClickInteraction)
  * @see IComponent#getClicked()
  */
-public final record ClickInteraction(
-		/**
-		 * The {@link ClickType} to respond to
-		 * 
-		 * @since 1.0.0
-		 */
-		@NotNull ClickType type,
-		/**
-		 * The data that will be used in tandem with the {@link #type}
-		 * 
-		 * @since 1.0.0
-		 */
-		@NotNull @DisallowsEmptyString String data) {
+@RequiredArgsConstructor
+@Accessors(makeFinal = true, fluent = true, chain = false) @Getter
+public final class ClickInteraction {
+	/**
+	 * The {@link ClickType} to respond to
+	 * 
+	 * @since 1.0.0
+	 */
+	private final @NotNull ClickType type;
+	/**
+	 * The data that will be used in tandem with the {@link #type}
+	 * 
+	 * @since 1.0.0
+	 */
+	private final @NotNull @DisallowsEmptyString String data;
 }

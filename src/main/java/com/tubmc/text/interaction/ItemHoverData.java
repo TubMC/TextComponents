@@ -4,6 +4,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import fun.bb1.objects.annotations.DisallowsEmptyString;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.Accessors;
 
 /**
  *    Copyright 2023 TubMC.com
@@ -28,4 +31,13 @@ import fun.bb1.objects.annotations.DisallowsEmptyString;
  * @version 1.0.0
  * @see HoverType#ITEM
  */
-public final record ItemHoverData(@NotNull @DisallowsEmptyString String itemIdentifier, int count, @Nullable @DisallowsEmptyString String nbtTagAsString) { }
+@RequiredArgsConstructor
+@Accessors(makeFinal = true, fluent = true, chain = false) @Getter
+public final class ItemHoverData {
+	
+	private final @NotNull @DisallowsEmptyString String itemIdentifier;
+	
+	private final int count;
+	
+	private final @Nullable @DisallowsEmptyString String nbtTagAsString;
+}
