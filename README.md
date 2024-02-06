@@ -6,6 +6,8 @@ A cross-platform way to deal with stylised text
 
 - [Spigot](https://github.com/TubMC/TextComponents-Spigot)
 - [Fabric](https://github.com/TubMC/TextComponents-Fabric)
+- [Adventure](https://github.com/TubMC/TextComponents-Adventure)
+  - [Sponge8](https://github.com/TubMC/TextComponents-Sponge/tree/sponge8)
 
 ## Installation
 
